@@ -1,0 +1,289 @@
+list_num,item_num,item_id,title,condition_num,predicate,access
+0,1,N01_police_interview,Police interview,2,looks,auditory_only
+0,2,N02_recording_studio,Recording studio,7,sounds,neither
+0,3,N03_medical_simulation,Medical simulation,11,seems,neither
+0,4,N04_focus_group,Focus group,0,looks,both
+0,5,N05_radio_broadcast,Radio broadcast,5,sounds,visual_only
+0,6,N06_television_talk_show,Television talk show,9,seems,visual_only
+0,7,N07_theater_performance,Theater performance,4,sounds,both
+0,8,N08_parenting_study,Parenting study,1,looks,visual_only
+0,9,N09_job_interview,Job interview,10,seems,auditory_only
+0,10,N10_teaching_exercise,Teaching exercise,6,sounds,auditory_only
+0,11,N11_language_study,Language study,3,looks,neither
+0,12,N12_mock_trial,Mock trial,8,seems,both
+0,13,N13_oral_exam,Oral exam,9,seems,visual_only
+0,14,N14_tutoring,Tutoring,3,looks,neither
+0,15,N15_charity_auction,Charity Auction,5,sounds,visual_only
+0,16,N16_music_audition,Music audition,11,seems,neither
+0,17,N17_dance_rehearsal,Dance rehearsal,1,looks,visual_only
+0,18,N18_press_interview,Press interview,6,sounds,auditory_only
+0,19,N19_research_presentation,Research presentation,0,looks,both
+0,20,N20_film_audition,Film audition,8,seems,both
+0,21,N21_escape_room,Escape Room,2,looks,auditory_only
+0,22,N22_restaurant_kitchen,Restaurant kitchen,10,seems,auditory_only
+0,23,N23_hospital,Hospital,7,sounds,neither
+0,24,N24_repair_shop,Repair shop,4,sounds,both
+1,1,N01_police_interview,Police interview,3,looks,neither
+1,2,N02_recording_studio,Recording studio,8,seems,both
+1,3,N03_medical_simulation,Medical simulation,0,looks,both
+1,4,N04_focus_group,Focus group,1,looks,visual_only
+1,5,N05_radio_broadcast,Radio broadcast,6,sounds,auditory_only
+1,6,N06_television_talk_show,Television talk show,10,seems,auditory_only
+1,7,N07_theater_performance,Theater performance,5,sounds,visual_only
+1,8,N08_parenting_study,Parenting study,2,looks,auditory_only
+1,9,N09_job_interview,Job interview,11,seems,neither
+1,10,N10_teaching_exercise,Teaching exercise,7,sounds,neither
+1,11,N11_language_study,Language study,4,sounds,both
+1,12,N12_mock_trial,Mock trial,9,seems,visual_only
+1,13,N13_oral_exam,Oral exam,10,seems,auditory_only
+1,14,N14_tutoring,Tutoring,4,sounds,both
+1,15,N15_charity_auction,Charity Auction,6,sounds,auditory_only
+1,16,N16_music_audition,Music audition,0,looks,both
+1,17,N17_dance_rehearsal,Dance rehearsal,2,looks,auditory_only
+1,18,N18_press_interview,Press interview,7,sounds,neither
+1,19,N19_research_presentation,Research presentation,1,looks,visual_only
+1,20,N20_film_audition,Film audition,9,seems,visual_only
+1,21,N21_escape_room,Escape Room,3,looks,neither
+1,22,N22_restaurant_kitchen,Restaurant kitchen,11,seems,neither
+1,23,N23_hospital,Hospital,8,seems,both
+1,24,N24_repair_shop,Repair shop,5,sounds,visual_only
+2,1,N01_police_interview,Police interview,4,sounds,both
+2,2,N02_recording_studio,Recording studio,9,seems,visual_only
+2,3,N03_medical_simulation,Medical simulation,1,looks,visual_only
+2,4,N04_focus_group,Focus group,2,looks,auditory_only
+2,5,N05_radio_broadcast,Radio broadcast,7,sounds,neither
+2,6,N06_television_talk_show,Television talk show,11,seems,neither
+2,7,N07_theater_performance,Theater performance,6,sounds,auditory_only
+2,8,N08_parenting_study,Parenting study,3,looks,neither
+2,9,N09_job_interview,Job interview,0,looks,both
+2,10,N10_teaching_exercise,Teaching exercise,8,seems,both
+2,11,N11_language_study,Language study,5,sounds,visual_only
+2,12,N12_mock_trial,Mock trial,10,seems,auditory_only
+2,13,N13_oral_exam,Oral exam,11,seems,neither
+2,14,N14_tutoring,Tutoring,5,sounds,visual_only
+2,15,N15_charity_auction,Charity Auction,7,sounds,neither
+2,16,N16_music_audition,Music audition,1,looks,visual_only
+2,17,N17_dance_rehearsal,Dance rehearsal,3,looks,neither
+2,18,N18_press_interview,Press interview,8,seems,both
+2,19,N19_research_presentation,Research presentation,2,looks,auditory_only
+2,20,N20_film_audition,Film audition,10,seems,auditory_only
+2,21,N21_escape_room,Escape Room,4,sounds,both
+2,22,N22_restaurant_kitchen,Restaurant kitchen,0,looks,both
+2,23,N23_hospital,Hospital,9,seems,visual_only
+2,24,N24_repair_shop,Repair shop,6,sounds,auditory_only
+3,1,N01_police_interview,Police interview,5,sounds,visual_only
+3,2,N02_recording_studio,Recording studio,10,seems,auditory_only
+3,3,N03_medical_simulation,Medical simulation,2,looks,auditory_only
+3,4,N04_focus_group,Focus group,3,looks,neither
+3,5,N05_radio_broadcast,Radio broadcast,8,seems,both
+3,6,N06_television_talk_show,Television talk show,0,looks,both
+3,7,N07_theater_performance,Theater performance,7,sounds,neither
+3,8,N08_parenting_study,Parenting study,4,sounds,both
+3,9,N09_job_interview,Job interview,1,looks,visual_only
+3,10,N10_teaching_exercise,Teaching exercise,9,seems,visual_only
+3,11,N11_language_study,Language study,6,sounds,auditory_only
+3,12,N12_mock_trial,Mock trial,11,seems,neither
+3,13,N13_oral_exam,Oral exam,0,looks,both
+3,14,N14_tutoring,Tutoring,6,sounds,auditory_only
+3,15,N15_charity_auction,Charity Auction,8,seems,both
+3,16,N16_music_audition,Music audition,2,looks,auditory_only
+3,17,N17_dance_rehearsal,Dance rehearsal,4,sounds,both
+3,18,N18_press_interview,Press interview,9,seems,visual_only
+3,19,N19_research_presentation,Research presentation,3,looks,neither
+3,20,N20_film_audition,Film audition,11,seems,neither
+3,21,N21_escape_room,Escape Room,5,sounds,visual_only
+3,22,N22_restaurant_kitchen,Restaurant kitchen,1,looks,visual_only
+3,23,N23_hospital,Hospital,10,seems,auditory_only
+3,24,N24_repair_shop,Repair shop,7,sounds,neither
+4,1,N01_police_interview,Police interview,6,sounds,auditory_only
+4,2,N02_recording_studio,Recording studio,11,seems,neither
+4,3,N03_medical_simulation,Medical simulation,3,looks,neither
+4,4,N04_focus_group,Focus group,4,sounds,both
+4,5,N05_radio_broadcast,Radio broadcast,9,seems,visual_only
+4,6,N06_television_talk_show,Television talk show,1,looks,visual_only
+4,7,N07_theater_performance,Theater performance,8,seems,both
+4,8,N08_parenting_study,Parenting study,5,sounds,visual_only
+4,9,N09_job_interview,Job interview,2,looks,auditory_only
+4,10,N10_teaching_exercise,Teaching exercise,10,seems,auditory_only
+4,11,N11_language_study,Language study,7,sounds,neither
+4,12,N12_mock_trial,Mock trial,0,looks,both
+4,13,N13_oral_exam,Oral exam,1,looks,visual_only
+4,14,N14_tutoring,Tutoring,7,sounds,neither
+4,15,N15_charity_auction,Charity Auction,9,seems,visual_only
+4,16,N16_music_audition,Music audition,3,looks,neither
+4,17,N17_dance_rehearsal,Dance rehearsal,5,sounds,visual_only
+4,18,N18_press_interview,Press interview,10,seems,auditory_only
+4,19,N19_research_presentation,Research presentation,4,sounds,both
+4,20,N20_film_audition,Film audition,0,looks,both
+4,21,N21_escape_room,Escape Room,6,sounds,auditory_only
+4,22,N22_restaurant_kitchen,Restaurant kitchen,2,looks,auditory_only
+4,23,N23_hospital,Hospital,11,seems,neither
+4,24,N24_repair_shop,Repair shop,8,seems,both
+5,1,N01_police_interview,Police interview,7,sounds,neither
+5,2,N02_recording_studio,Recording studio,0,looks,both
+5,3,N03_medical_simulation,Medical simulation,4,sounds,both
+5,4,N04_focus_group,Focus group,5,sounds,visual_only
+5,5,N05_radio_broadcast,Radio broadcast,10,seems,auditory_only
+5,6,N06_television_talk_show,Television talk show,2,looks,auditory_only
+5,7,N07_theater_performance,Theater performance,9,seems,visual_only
+5,8,N08_parenting_study,Parenting study,6,sounds,auditory_only
+5,9,N09_job_interview,Job interview,3,looks,neither
+5,10,N10_teaching_exercise,Teaching exercise,11,seems,neither
+5,11,N11_language_study,Language study,8,seems,both
+5,12,N12_mock_trial,Mock trial,1,looks,visual_only
+5,13,N13_oral_exam,Oral exam,2,looks,auditory_only
+5,14,N14_tutoring,Tutoring,8,seems,both
+5,15,N15_charity_auction,Charity Auction,10,seems,auditory_only
+5,16,N16_music_audition,Music audition,4,sounds,both
+5,17,N17_dance_rehearsal,Dance rehearsal,6,sounds,auditory_only
+5,18,N18_press_interview,Press interview,11,seems,neither
+5,19,N19_research_presentation,Research presentation,5,sounds,visual_only
+5,20,N20_film_audition,Film audition,1,looks,visual_only
+5,21,N21_escape_room,Escape Room,7,sounds,neither
+5,22,N22_restaurant_kitchen,Restaurant kitchen,3,looks,neither
+5,23,N23_hospital,Hospital,0,looks,both
+5,24,N24_repair_shop,Repair shop,9,seems,visual_only
+6,1,N01_police_interview,Police interview,8,seems,both
+6,2,N02_recording_studio,Recording studio,1,looks,visual_only
+6,3,N03_medical_simulation,Medical simulation,5,sounds,visual_only
+6,4,N04_focus_group,Focus group,6,sounds,auditory_only
+6,5,N05_radio_broadcast,Radio broadcast,11,seems,neither
+6,6,N06_television_talk_show,Television talk show,3,looks,neither
+6,7,N07_theater_performance,Theater performance,10,seems,auditory_only
+6,8,N08_parenting_study,Parenting study,7,sounds,neither
+6,9,N09_job_interview,Job interview,4,sounds,both
+6,10,N10_teaching_exercise,Teaching exercise,0,looks,both
+6,11,N11_language_study,Language study,9,seems,visual_only
+6,12,N12_mock_trial,Mock trial,2,looks,auditory_only
+6,13,N13_oral_exam,Oral exam,3,looks,neither
+6,14,N14_tutoring,Tutoring,9,seems,visual_only
+6,15,N15_charity_auction,Charity Auction,11,seems,neither
+6,16,N16_music_audition,Music audition,5,sounds,visual_only
+6,17,N17_dance_rehearsal,Dance rehearsal,7,sounds,neither
+6,18,N18_press_interview,Press interview,0,looks,both
+6,19,N19_research_presentation,Research presentation,6,sounds,auditory_only
+6,20,N20_film_audition,Film audition,2,looks,auditory_only
+6,21,N21_escape_room,Escape Room,8,seems,both
+6,22,N22_restaurant_kitchen,Restaurant kitchen,4,sounds,both
+6,23,N23_hospital,Hospital,1,looks,visual_only
+6,24,N24_repair_shop,Repair shop,10,seems,auditory_only
+7,1,N01_police_interview,Police interview,9,seems,visual_only
+7,2,N02_recording_studio,Recording studio,2,looks,auditory_only
+7,3,N03_medical_simulation,Medical simulation,6,sounds,auditory_only
+7,4,N04_focus_group,Focus group,7,sounds,neither
+7,5,N05_radio_broadcast,Radio broadcast,0,looks,both
+7,6,N06_television_talk_show,Television talk show,4,sounds,both
+7,7,N07_theater_performance,Theater performance,11,seems,neither
+7,8,N08_parenting_study,Parenting study,8,seems,both
+7,9,N09_job_interview,Job interview,5,sounds,visual_only
+7,10,N10_teaching_exercise,Teaching exercise,1,looks,visual_only
+7,11,N11_language_study,Language study,10,seems,auditory_only
+7,12,N12_mock_trial,Mock trial,3,looks,neither
+7,13,N13_oral_exam,Oral exam,4,sounds,both
+7,14,N14_tutoring,Tutoring,10,seems,auditory_only
+7,15,N15_charity_auction,Charity Auction,0,looks,both
+7,16,N16_music_audition,Music audition,6,sounds,auditory_only
+7,17,N17_dance_rehearsal,Dance rehearsal,8,seems,both
+7,18,N18_press_interview,Press interview,1,looks,visual_only
+7,19,N19_research_presentation,Research presentation,7,sounds,neither
+7,20,N20_film_audition,Film audition,3,looks,neither
+7,21,N21_escape_room,Escape Room,9,seems,visual_only
+7,22,N22_restaurant_kitchen,Restaurant kitchen,5,sounds,visual_only
+7,23,N23_hospital,Hospital,2,looks,auditory_only
+7,24,N24_repair_shop,Repair shop,11,seems,neither
+8,1,N01_police_interview,Police interview,10,seems,auditory_only
+8,2,N02_recording_studio,Recording studio,3,looks,neither
+8,3,N03_medical_simulation,Medical simulation,7,sounds,neither
+8,4,N04_focus_group,Focus group,8,seems,both
+8,5,N05_radio_broadcast,Radio broadcast,1,looks,visual_only
+8,6,N06_television_talk_show,Television talk show,5,sounds,visual_only
+8,7,N07_theater_performance,Theater performance,0,looks,both
+8,8,N08_parenting_study,Parenting study,9,seems,visual_only
+8,9,N09_job_interview,Job interview,6,sounds,auditory_only
+8,10,N10_teaching_exercise,Teaching exercise,2,looks,auditory_only
+8,11,N11_language_study,Language study,11,seems,neither
+8,12,N12_mock_trial,Mock trial,4,sounds,both
+8,13,N13_oral_exam,Oral exam,5,sounds,visual_only
+8,14,N14_tutoring,Tutoring,11,seems,neither
+8,15,N15_charity_auction,Charity Auction,1,looks,visual_only
+8,16,N16_music_audition,Music audition,7,sounds,neither
+8,17,N17_dance_rehearsal,Dance rehearsal,9,seems,visual_only
+8,18,N18_press_interview,Press interview,2,looks,auditory_only
+8,19,N19_research_presentation,Research presentation,8,seems,both
+8,20,N20_film_audition,Film audition,4,sounds,both
+8,21,N21_escape_room,Escape Room,10,seems,auditory_only
+8,22,N22_restaurant_kitchen,Restaurant kitchen,6,sounds,auditory_only
+8,23,N23_hospital,Hospital,3,looks,neither
+8,24,N24_repair_shop,Repair shop,0,looks,both
+9,1,N01_police_interview,Police interview,11,seems,neither
+9,2,N02_recording_studio,Recording studio,4,sounds,both
+9,3,N03_medical_simulation,Medical simulation,8,seems,both
+9,4,N04_focus_group,Focus group,9,seems,visual_only
+9,5,N05_radio_broadcast,Radio broadcast,2,looks,auditory_only
+9,6,N06_television_talk_show,Television talk show,6,sounds,auditory_only
+9,7,N07_theater_performance,Theater performance,1,looks,visual_only
+9,8,N08_parenting_study,Parenting study,10,seems,auditory_only
+9,9,N09_job_interview,Job interview,7,sounds,neither
+9,10,N10_teaching_exercise,Teaching exercise,3,looks,neither
+9,11,N11_language_study,Language study,0,looks,both
+9,12,N12_mock_trial,Mock trial,5,sounds,visual_only
+9,13,N13_oral_exam,Oral exam,6,sounds,auditory_only
+9,14,N14_tutoring,Tutoring,0,looks,both
+9,15,N15_charity_auction,Charity Auction,2,looks,auditory_only
+9,16,N16_music_audition,Music audition,8,seems,both
+9,17,N17_dance_rehearsal,Dance rehearsal,10,seems,auditory_only
+9,18,N18_press_interview,Press interview,3,looks,neither
+9,19,N19_research_presentation,Research presentation,9,seems,visual_only
+9,20,N20_film_audition,Film audition,5,sounds,visual_only
+9,21,N21_escape_room,Escape Room,11,seems,neither
+9,22,N22_restaurant_kitchen,Restaurant kitchen,7,sounds,neither
+9,23,N23_hospital,Hospital,4,sounds,both
+9,24,N24_repair_shop,Repair shop,1,looks,visual_only
+10,1,N01_police_interview,Police interview,0,looks,both
+10,2,N02_recording_studio,Recording studio,5,sounds,visual_only
+10,3,N03_medical_simulation,Medical simulation,9,seems,visual_only
+10,4,N04_focus_group,Focus group,10,seems,auditory_only
+10,5,N05_radio_broadcast,Radio broadcast,3,looks,neither
+10,6,N06_television_talk_show,Television talk show,7,sounds,neither
+10,7,N07_theater_performance,Theater performance,2,looks,auditory_only
+10,8,N08_parenting_study,Parenting study,11,seems,neither
+10,9,N09_job_interview,Job interview,8,seems,both
+10,10,N10_teaching_exercise,Teaching exercise,4,sounds,both
+10,11,N11_language_study,Language study,1,looks,visual_only
+10,12,N12_mock_trial,Mock trial,6,sounds,auditory_only
+10,13,N13_oral_exam,Oral exam,7,sounds,neither
+10,14,N14_tutoring,Tutoring,1,looks,visual_only
+10,15,N15_charity_auction,Charity Auction,3,looks,neither
+10,16,N16_music_audition,Music audition,9,seems,visual_only
+10,17,N17_dance_rehearsal,Dance rehearsal,11,seems,neither
+10,18,N18_press_interview,Press interview,4,sounds,both
+10,19,N19_research_presentation,Research presentation,10,seems,auditory_only
+10,20,N20_film_audition,Film audition,6,sounds,auditory_only
+10,21,N21_escape_room,Escape Room,0,looks,both
+10,22,N22_restaurant_kitchen,Restaurant kitchen,8,seems,both
+10,23,N23_hospital,Hospital,5,sounds,visual_only
+10,24,N24_repair_shop,Repair shop,2,looks,auditory_only
+11,1,N01_police_interview,Police interview,1,looks,visual_only
+11,2,N02_recording_studio,Recording studio,6,sounds,auditory_only
+11,3,N03_medical_simulation,Medical simulation,10,seems,auditory_only
+11,4,N04_focus_group,Focus group,11,seems,neither
+11,5,N05_radio_broadcast,Radio broadcast,4,sounds,both
+11,6,N06_television_talk_show,Television talk show,8,seems,both
+11,7,N07_theater_performance,Theater performance,3,looks,neither
+11,8,N08_parenting_study,Parenting study,0,looks,both
+11,9,N09_job_interview,Job interview,9,seems,visual_only
+11,10,N10_teaching_exercise,Teaching exercise,5,sounds,visual_only
+11,11,N11_language_study,Language study,2,looks,auditory_only
+11,12,N12_mock_trial,Mock trial,7,sounds,neither
+11,13,N13_oral_exam,Oral exam,8,seems,both
+11,14,N14_tutoring,Tutoring,2,looks,auditory_only
+11,15,N15_charity_auction,Charity Auction,4,sounds,both
+11,16,N16_music_audition,Music audition,10,seems,auditory_only
+11,17,N17_dance_rehearsal,Dance rehearsal,0,looks,both
+11,18,N18_press_interview,Press interview,5,sounds,visual_only
+11,19,N19_research_presentation,Research presentation,11,seems,neither
+11,20,N20_film_audition,Film audition,7,sounds,neither
+11,21,N21_escape_room,Escape Room,1,looks,visual_only
+11,22,N22_restaurant_kitchen,Restaurant kitchen,9,seems,visual_only
+11,23,N23_hospital,Hospital,6,sounds,auditory_only
+11,24,N24_repair_shop,Repair shop,3,looks,neither

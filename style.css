@@ -1,0 +1,444 @@
+/* Minimal, consistent layout for the reading experiment.
+   Presentation only; the timing and counterbalancing logic is unchanged. */
+:root {
+  --ink: #111111;
+  --muted: #555555;
+  --border: #d8d8d8;
+  --background: #ffffff;
+  --font: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--background); color: var(--ink); }
+.jspsych-display-element {
+  background: var(--background);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 22px;
+}
+.jspsych-content { width: min(94vw, 960px); max-width: 960px; }
+#boot-status { font: 18px var(--font); max-width: 680px; margin: 18vh auto; padding: 1rem; }
+
+/* Context: one stationary window; text builds from top to bottom. */
+.reading-panel {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 26px 32px;
+  text-align: left;
+  box-shadow: none;
+  margin-inline: auto;
+}
+.story-panel {
+  width: 100%;
+  height: auto;
+  max-height: min(75dvh, 560px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.reading-text {
+  font-family: var(--font);
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  text-align: left;
+  color: var(--ink);
+}
+.item-counter {
+  flex: none;
+  color: var(--muted);
+  font: 400 15px var(--font);
+  margin: 0 0 15px;
+}
+.context-body, .word-body {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* The full narrative sets a fixed height within each item; only the
+   visible cumulative sentences are drawn on top of the invisible guide. */
+.context-body { position: relative; }
+/* Match the narrative font to the word-by-word text without altering instructions. */
+.story-panel .context-body { font-size: 28px; }
+.context-size-guide { visibility: hidden; pointer-events: none; }
+.context-visible { position: absolute; top: 0; left: 0; right: 0; }
+.context-sentence { margin: 0 0 .65em; font-weight: 400; }
+.context-current { font-weight: 700; }
+.reading-instructions {
+  flex: none;
+  color: var(--muted);
+  font: 400 15px/1.45 var(--font);
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding-top: 12px;
+}
+kbd {
+  font: inherit;
+  color: var(--ink);
+  background: #f6f6f6;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+  padding: 1px 5px;
+}
+
+/* Self-paced reading: the critical continuation is centered on the screen.
+   It matches the narrative at 28px, with no
+   visible border or instructions. Word slots reserve each word's true
+   Arial width, so words never shift during successive reveals. */
+.word-panel {
+  width: max-content;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 0;
+  height: auto;
+  margin-inline: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  text-align: center;
+}
+/* Center vertically in jsPsych's viewport and horizontally inside the panel. */
+body:has(.word-panel) .jspsych-content-wrapper {
+  align-items: center !important;
+  justify-content: center !important;
+}
+body:has(.word-panel) .jspsych-content {
+  width: calc(100vw - 48px);
+  max-width: none;
+  margin: auto !important;
+}
+.word-panel .word-body {
+  flex: 0 0 auto;
+  width: max-content;
+  overflow: visible;
+  font-size: 28px;
+  line-height: 1.5;
+  text-align: center;
+}
+.moving-window {
+  display: flex;
+  width: max-content;
+  flex-flow: row nowrap;
+  align-content: flex-start;
+  justify-content: center;
+  column-gap: 22px; /* Same distance between all reserved word slots. */
+  row-gap: .65em;
+  font: inherit;
+  line-height: inherit;
+  text-align: center;
+}
+.mw-slot {
+  /* Both layers occupy the same grid cell. Even the widest real word keeps
+     its slot size while a three-dash mask is visible. */
+  display: inline-grid;
+  flex: 0 0 auto;
+  justify-items: center;
+  align-items: baseline;
+  white-space: nowrap;
+  font: inherit;
+  line-height: inherit;
+}
+.mw-real, .mw-mask { grid-area: 1 / 1; white-space: nowrap; font: inherit; }
+.mw-real { color: var(--ink); }
+.mw-mask { color: #777777; }
+.mw-masked .mw-real { visibility: hidden; }
+.mw-current .mw-mask { visibility: hidden; }
+.mw-current .mw-real { visibility: visible; }
+
+/* A four-question form can be taller than the screen. The default
+   vertically centered jsPsych content risks pushing its TOP above the
+   viewport. Anchor question pages to the top and allow normal scrolling. */
+body:has(#jspsych-survey-multi-choice-form) .jspsych-content-wrapper,
+body:has(#jspsych-survey-likert-form) .jspsych-content-wrapper {
+  margin: 0 auto !important;
+  flex: 0 0 auto !important;
+  align-items: flex-start !important;
+  width: 100%;
+}
+body:has(#jspsych-survey-multi-choice-form) .jspsych-content,
+body:has(#jspsych-survey-likert-form) .jspsych-content {
+  margin: 0 auto !important;
+  padding-top: clamp(128px, 15vh, 170px);
+  padding-bottom: 88px;
+}
+/* Questions: regular weight with generous vertical spacing. */
+.question-heading {
+  font: 400 15px/1.4 var(--font);
+  text-align: left;
+  color: var(--muted);
+  margin: 36px 0 22px;
+  padding: 0 0 15px;
+  border-bottom: 1px solid #eeeeee;
+}
+.question-heading span { font: inherit; color: var(--muted); margin-left: 10px; }
+.question-number { font-weight: 400; color: var(--ink); }
+#jspsych-survey-multi-choice-form, #jspsych-survey-likert-form {
+  font-family: var(--font);
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
+}
+.jspsych-survey-multi-choice-question, .jspsych-survey-likert-question {
+  background: transparent;
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #eeeeee;
+  border-radius: 0;
+  text-align: left;
+  padding: 22px 0 30px !important;
+  margin: 0 0 24px !important;
+  font-family: var(--font) !important;
+}
+.jspsych-survey-multi-choice-text, .jspsych-survey-likert-statement,
+.jspsych-survey-multi-choice-question p, .jspsych-survey-likert-question p {
+  font: 400 18px/1.45 var(--font) !important;
+  color: var(--ink);
+  margin: 0 0 17px !important;
+}
+.jspsych-survey-multi-choice-option {
+  margin: 12px 0 12px 4px !important;
+  font: 400 17px/1.4 var(--font) !important;
+}
+.jspsych-survey-multi-choice-option label,
+.jspsych-survey-likert-opts li label { font-weight: 400 !important; cursor: pointer; }
+input[type=radio] { accent-color: #222222; width: 18px; height: 18px; vertical-align: middle; cursor: pointer; }
+/* Q5 agreement scale: five equally spaced anchor points across the form.
+   The endpoint captions sit below their numerals (no dashes or separators).
+   Each LI has the same 20px anchor width; space-between makes the centers
+   equally spaced from 1 to 5 while leaving room for long endpoint captions. */
+.jspsych-survey-likert-opts {
+  width: min(100%, 880px) !important;
+  max-width: 880px !important;
+  margin: 32px auto 32px !important;
+  padding: 0 0 94px !important;
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: flex-start !important;
+  gap: 0 !important;
+  list-style: none !important;
+}
+.jspsych-survey-likert-opts::before {
+  display: none !important;
+  content: none !important;
+}
+.jspsych-survey-likert-opts li {
+  display: flex !important;
+  flex: 0 0 20px !important;
+  width: 20px !important;
+  min-width: 20px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  text-align: center !important;
+}
+.jspsych-survey-likert-opts li input[type=radio] {
+  position: static !important;
+  order: 1;
+  flex-shrink: 0;
+  width: 18px !important;
+  height: 18px !important;
+  margin: 0 !important;
+  top: auto !important;
+  left: auto !important;
+  transform: none !important;
+}
+.jspsych-survey-likert-opts li label {
+  position: relative;
+  display: flex !important;
+  order: 2;
+  width: 20px;
+  flex-direction: column;
+  align-items: center;
+  margin: 7px 0 0 !important;
+  padding: 0 !important;
+  font: 400 18px/1.35 var(--font) !important;
+  color: var(--ink) !important;
+  cursor: pointer;
+}
+.likert-number { font: inherit; display: block; }
+.likert-endpoint {
+  position: absolute;
+  display: block;
+  top: 50px; /* Keep the agreement endpoints clearly below numerals 1 and 5. */
+  font: 400 16px/1.35 var(--font);
+  color: var(--ink);
+  width: 145px;
+  white-space: normal;
+}
+.jspsych-survey-likert-opts li:first-child .likert-endpoint {
+  left: 0;
+  text-align: left;
+}
+.jspsych-survey-likert-opts li:last-child .likert-endpoint {
+  right: 0;
+  text-align: right;
+}
+
+/* End-of-practice choice: make the two buttons clearly separate.
+   This applies only to the practice decision (the only HTML button trial). */
+#jspsych-html-button-response-btngroup {
+  display: flex !important;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+  row-gap: 20px;
+  margin-top: 34px;
+}
+#jspsych-html-button-response-btngroup .jspsych-html-button-response-button {
+  margin: 0 !important;
+  display: block !important;
+}
+#jspsych-html-button-response-btngroup .jspsych-btn {
+  min-width: 214px;
+  margin: 0 !important;
+}
+.practice-choice {
+  max-width: 690px;
+  margin: 0 auto;
+  font: 400 20px/1.5 var(--font);
+  text-align: center;
+}
+.practice-choice p { margin: 0 0 12px; }
+
+/* Plain, readable buttons with adequate contrast and a generous click target. */
+.jspsych-btn, button.jspsych-btn, input.jspsych-btn {
+  appearance: none;
+  font: 400 18px var(--font) !important;
+  background: #222222 !important;
+  color: #ffffff !important;
+  border: 1px solid #222222 !important;
+  border-radius: 4px !important;
+  padding: 13px 26px !important;
+  min-height: 50px;
+  margin: 18px 0 !important;
+  cursor: pointer;
+  box-shadow: none;
+}
+.jspsych-btn:hover, .jspsych-btn:focus-visible {
+  background: #000000 !important;
+  border-color: #000000 !important;
+  color: #ffffff !important;
+}
+.jspsych-btn:focus-visible { outline: 3px solid #777777; outline-offset: 3px; }
+.jspsych-btn:disabled { opacity: .55; cursor: not-allowed; }
+.small-note { font: 400 16px var(--font); color: var(--muted); }
+
+@media (max-width: 720px) {
+  .jspsych-content { width: 95vw; }
+  body:has(.word-panel) .jspsych-content { width: calc(100vw - 32px); }
+  .reading-panel { padding: 18px 18px; }
+  .story-panel { max-height: min(78dvh, 560px); }
+  .word-panel { width: max-content; max-width: 100%; height: auto; padding: 0; }
+  body:has(#jspsych-survey-multi-choice-form) .jspsych-content,
+  body:has(#jspsych-survey-likert-form) .jspsych-content { padding-top: 88px; padding-bottom: 64px; }
+  .reading-text { font-size: 22px; line-height: 1.5; }
+  .reading-instructions { font-size: 14px; }
+  .question-heading span { display: block; margin: 4px 0 0; }
+  .likert-endpoint { width: 105px; font-size: 14px; }
+  #jspsych-html-button-response-btngroup { column-gap: 22px; row-gap: 22px; }
+  #jspsych-html-button-response-btngroup .jspsych-btn { min-width: min(75vw, 260px); }
+  .jspsych-survey-multi-choice-text, .jspsych-survey-likert-statement,
+  .jspsych-survey-multi-choice-question p, .jspsych-survey-likert-question p { font-size: 25px !important; }
+  .jspsych-survey-multi-choice-option,
+  .jspsych-survey-likert-opts li,
+  .jspsych-survey-likert-opts li label { font-size: 16px !important; }
+}
+
+/* Question sequence: one persistent page, one required question at a time. */
+body:has(.question-sequence) .jspsych-content-wrapper {
+  margin: 0 auto !important;
+  flex: 0 0 auto !important;
+  align-items: flex-start !important;
+  width: 100%;
+}
+body:has(.question-sequence) .jspsych-content {
+  margin: 0 auto !important;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.question-sequence {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: var(--font);
+}
+.question-stage {
+  flex: 1;
+  min-height: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 18px 0 42px;
+}
+.question-step { width: min(100%, 880px); margin-inline: auto; }
+.question-step[hidden] { display: none !important; }
+.question-step.is-active { animation: question-slide-in 180ms ease-out; }
+@keyframes question-slide-in {
+  from { opacity: 0; transform: translateX(14px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.question-fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.question-prompt {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin: 0 0 24px;
+  font: 400 28px/1.45 var(--font);
+  color: var(--ink);
+  text-align: left;
+}
+.question-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 100%;
+  margin-inline: 0;
+}
+.question-option {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  padding: 8px 4px;
+  font: 400 25px/1.4 var(--font);
+  cursor: pointer;
+}
+.question-option input { flex: none; margin: 3px 0 0; }
+.question-option span { display: block; }
+.question-step .jspsych-survey-likert-opts { margin-top: 20px !important; }
+.intro-panel #intro-paragraph { margin: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .question-step.is-active { animation: none; }
+}
+@media (max-width: 720px) {
+  body:has(.question-sequence) .jspsych-content { padding-top: 0; }
+  .question-prompt { font-size: 28px; }
+  .question-option { font-size: 25px; }
+}
+
+/* Intro only: accumulate instructions in a stationary narrative-style window. */
+.intro-panel { height: min(75dvh, 560px); }
+.intro-panel .context-body { font-size: 22px; }
+@media (max-width: 720px) {
+  .intro-panel { height: min(78dvh, 560px); }
+}
+
+/* Only the short post-practice instructions: fit the box to the full text.
+   The invisible guide keeps this box the same size as sentences accumulate. */
+.intro-panel.main-start-panel {
+  height: auto;
+}
+.intro-panel.main-start-panel .context-body {
+  flex: 0 1 auto;
+}
